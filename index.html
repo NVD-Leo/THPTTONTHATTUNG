@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +9,21 @@
         body {
             font-family: Arial, sans-serif;
         }
+
         .header {
             background-color: #2d9cdb;
             padding: 20px;
             text-align: center;
             color: rgb(141, 56, 56);
         }
+
         .navbar {
             display: flex;
             justify-content: left;
             overflow: hidden;
             background-color: #333;
         }
+
         .navbar a {
             float: left;
             display: block;
@@ -28,16 +32,19 @@
             padding: 14px 16px;
             text-decoration: none;
         }
+
         .navbar a:hover {
             background-color: #ddd;
             color: black;
         }
+
         .dropdown {
             float: left;
             overflow: hidden;
         }
+
         .dropdown .dropbtn {
-            font-size: 16px;  
+            font-size: 16px;
             border: none;
             outline: none;
             color: rgb(252, 251, 251);
@@ -46,14 +53,16 @@
             font-family: inherit;
             margin: 0;
         }
+
         .dropdown-content {
             display: none;
             position: absolute;
             background-color: #f9f9f9;
             min-width: 200px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
+
         .dropdown-content a {
             float: none;
             color: black;
@@ -62,12 +71,15 @@
             display: block;
             text-align: left;
         }
+
         .dropdown-content a:hover {
             background-color: #3c5d9b;
         }
+
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
         .dropdown:hover .dropbtn {
             background-color: #dddddd;
             color: black;
@@ -86,10 +98,12 @@
         }
 
         .sidebar {
+            width: 25%;
             flex: 1;
             padding: 10px;
             background-color: #0f9e46;
-            margin-left: 20px; /* Khoảng cách giữa main-content và sidebar */
+            margin-left: 20px;
+            /* Khoảng cách giữa main-content và sidebar */
             border: 1px solid #ccc;
         }
 
@@ -97,6 +111,7 @@
             display: flex;
             flex-wrap: wrap;
         }
+
         .news-item {
             flex: 1;
             margin: 10px;
@@ -104,59 +119,84 @@
             background-color: #f1f1f1;
             border: 1px solid #ccc;
             max-width: 48%;
-            border-radius: 15px; /* Bo tròn khung */
+            border-radius: 15px;
+            /* Bo tròn khung */
         }
-        .news-item:hover{
-            transform: translateY(-10px); /* Di chuyển lên trên 10px */
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+
+        .news-item:hover {
+            transform: translateY(-10px);
+            /* Di chuyển lên trên 10px */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+            /* Đổ bóng */
         }
 
         /* Thêm quy tắc CSS cho hình ảnh trong phần main-content */
         .news-item img {
-            width: 100%; /* Để hình ảnh chiếm hết chiều rộng của khối chứa */
-            height: auto; /* Tự động điều chỉnh chiều cao theo tỉ lệ */
-            max-width: 300px; /* Thiết lập chiều rộng tối đa của ảnh */
+            width: 100%;
+            /* Để hình ảnh chiếm hết chiều rộng của khối chứa */
+            height: auto;
+            /* Tự động điều chỉnh chiều cao theo tỉ lệ */
+            max-width: 300px;
+            /* Thiết lập chiều rộng tối đa của ảnh */
         }
+
         footer {
             background-color: #333;
             color: #fff;
             padding: 50px 0;
         }
+
         /* */
         .container {
             max-width: 1140px;
             margin: 0 auto;
         }
+
         .row {
             display: flex;
             justify-content: space-between;
         }
+
         .col-md-6 {
             flex: 1;
             padding: 0 20px;
         }
+
         h2 {
             font-size: 24px;
             margin-bottom: 20px;
         }
+
         p {
             margin-bottom: 10px;
         }
-      
 
-        
+
+
 
         .active {
             display: block;
         }
-        
+
         img {
             width: -webkit-fill-available;
         }
+
+        .anhbia {
+            width: 350px;
+
+        }
+        .map{
+            float: right;
+            margin-top: -210px;
+        }
     </style>
 </head>
-<body>
 
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v21.0"></script>
     <!-- Header -->
     <div class="header">
         <img src="Banner.png" alt="Lo go">
@@ -179,7 +219,7 @@
                 <a href="#">Chi hội Khuyến học</a>
                 <a href="#">Hội Chữ thập đỏ</a>
             </div>
-        </div> 
+        </div>
         <div class="dropdown">
             <button class="dropbtn">Liên hệ</button>
             <div class="dropdown-content">
@@ -190,7 +230,7 @@
                 <a href="#">Hoạt động Đoàn TN</a>
                 <a href="#">Khuyến học, nhân đạo</a>
             </div>
-        </div> 
+        </div>
 
         <div class="dropdown">
             <button class="dropbtn">Hỏi đáp</button>
@@ -199,8 +239,8 @@
                 <a href="#">Coming Soon</a>
             </div>
         </div>
-      <a href="#" style="color: #fffefe;">Liên hệ - Góp ý </a>
-        
+        <a href="#" style="color: #fffefe;">Liên hệ - Góp ý </a>
+
 
     </div>
 
@@ -214,19 +254,28 @@
                     <h3>Khai giảng năm học mới 2024-2025</h3>
                     <img src="anhKG.jpg" alt="Khai giảng">
                     <p>Hòa chung không khí tưng bừng, phấn khởi của hàng triệu học sinh...</p>
+                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="30"
+                        data-layout="" data-action="" data-size="" data-share="true"></div>
                 </div>
                 <div class="news-item">
                     <h3>Hướng tới kỷ niệm 20 năm thành lập trường</h3>
                     <img src="Logo-3T-700x441.jpg" alt="Kỷ niệm">
                     <p>Khai mạc giải bóng đá giao hữu cựu học sinh...</p>
+                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="30"
+                        data-layout="" data-action="" data-size="" data-share="true"></div>
                 </div>
             </div>
         </div>
 
         <!-- Sidebar -->
         <div class="sidebar">
-            <div><strong style="color: red; font-weight: bold;">|</strong> <strong style="color: burlywood; font-weight: bold;"> Một số hình ảnh tiêu biểu</strong> </div>
-           <img src="anhKG.jpg">
+            <div><strong style="color: red; font-weight: bold;">|</strong> <strong
+                    style="color: burlywood; font-weight: bold;"> Một số hình ảnh tiêu biểu</strong> </div>
+            <img class="anhbia" src="anhKG.jpg">
+            <iframe width="350" height="300" src="https://www.youtube.com/embed/QiMEGyCacDI?si=dpRspG1MSFD4Wgj8"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <h3>Thông tin liên hệ</h3>
             <p>Địa chỉ: Số 200, đường Trần Nhân Tông, phường An Hải Bắc, quận Sơn Trà, Đà Nẵng</p>
             <p>Email: thpttonthattungdn2021@gmail.com</p>
@@ -237,16 +286,24 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <h2>Trường THPT Tôn Thất Tùng</h2>
-              <p><strong>Địa chỉ:</strong> Số 200, đường Trần Nhân Tông, phường An Hải Bắc, quận Sơn Trà, thành phố Đà Nẵng</p>
-              <p><strong>Email:</strong> thpttonthattungdn2021@gmail.com</p>
-              <p><strong>Điện thoại:</strong> 0236.3935191</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Trường THPT Tôn Thất Tùng</h2>
+                    <p><strong>Địa chỉ:</strong> Số 200, đường Trần Nhân Tông, phường An Hải Bắc, quận Sơn Trà, thành
+                        phố Đà Nẵng</p>
+                    <p><strong>Email:</strong> thpttonthattungdn2021@gmail.com</p>
+                    <p><strong>Điện thoại:</strong> 0236.3935191</p>
+                </div>
             </div>
-          </div>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7667.186859796275!2d108.23571018518065!3d16.086574234959986!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142181fbe488151%3A0x92d1b01ed3f7d400!2zVHLGsOG7nW5nIFRIUFQgVMO0biBUaOG6pXQgVMO5bmc!5e0!3m2!1svi!2sus!4v1728374854536!5m2!1svi!2sus"
+                    width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
-    </footer>   
+    </footer>  
 
 </body>
+
 </html>

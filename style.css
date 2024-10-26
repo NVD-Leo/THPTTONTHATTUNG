@@ -106,6 +106,9 @@ body {
     align-content: center;
     justify-content: space-evenly;
 }
+.news{
+    justify-items: center;
+}
 
 .news-item {
     flex: auto;
@@ -124,6 +127,13 @@ body {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
     /* Đổ bóng */
 }
+.new-item:hover{
+    transform: translateY(-10px);
+    /* Di chuyển lên trên 10px */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    /* Đổ bóng */
+}
+
 
 /* Thêm quy tắc CSS cho hình ảnh trong phần main-content */
 .news-item img {
@@ -134,7 +144,19 @@ body {
     max-width: 300px;
     /* Thiết lập chiều rộng tối đa của ảnh */
 }
-
+.new-item img{
+    height:auto
+}
+.new-item{
+    flex: auto;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    max-width: 48%;
+    border-radius: 15px;
+    /* Bo tròn khung */
+}
 footer {
     background-color: #333;
     color: #fff;
